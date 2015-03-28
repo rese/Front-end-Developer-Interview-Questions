@@ -47,17 +47,40 @@ This file contains a number of front-end interview questions that can be used wh
 #### HTML Questions:
 
 * What does a `doctype` do?
+   
+      It tells the client how to interpret and render the document
 * What's the difference between standards mode and quirks mode?
+  
+      Quirks mode emulates non-standard behavior to provide support for old browsers so that exisiting content doesn't break. Standards mode emulates what's described in the specifications. Most obvious difference behavior can be seen in the box model.
 * What's the difference between HTML and XHTML?
+
+      XHTML is much more strict than HTML (e.g. elements must be properly nested and closed)
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
+
+      They can be used to semantically add additional application-specific on the markup.
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+
+      All three are client storage solutions. `cookie` is the old school way but the more recent `sessionStorage` and `localStorage` should be used if it's supported. Data in `sessionStorage` is good only for the duration of the session while `localStorage` stores data without an expiration date.
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.
+   
+      The difference lies in when the script is downloaded and executed.
+       - `<script>`: Client parses the document. When a script is encountered, parsing is paused to download the file and execute it. Parsing resumes only after execution.
+       - `<script async>`: Document is parsed and script is downloaded asynchronously when encountered. Parsing is paused to execute the script when it has been fully downloaded.
+       - `<script defer>`: Same as async for the parsing and download portion. Only when parsing has finished will the script be executed even if downloaded finishes before parsing.
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+
+      - Script tags are better just before `</body>` because downloading them is a blocking operation and having them near the end of the document prevents flashing the user with a 'white screen'.
+      - CSS are better at the `<head>` area so that content is rendered with styling right away.
+      
 * What is progressive rendering?
+    
+    A rendering technique to enhance perceived if not actual load time by rendering important parts of the page first and rendering less important ones when they are ready.
+
 
 #### CSS Questions:
 
