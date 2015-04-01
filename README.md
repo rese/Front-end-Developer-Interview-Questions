@@ -85,26 +85,53 @@ This file contains a number of front-end interview questions that can be used wh
 #### CSS Questions:
 
 * What is the difference between classes and ID's in CSS?
+
+    IDs are more specific and should be applied to elements that are 'unique'. Classes are less specific and can be applied to multiple items that would share the same styling.
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+
+    Both aim for styling consistency in browsers. `resetting` is more destructive in the sense that it removes browser-specific default styling while `normalizing` preserves them.
 * Describe Floats and how they work.
+
+    A floated element is taken out of the normal document flow and is situated left | right with surrounding elements wrapping around it.
 * Describe z-index and how stacking context is formed.
+
+    The z-index of an element specifies how it's stacked vertically against other elements whose `position` is set to absolute|relative|fixed.
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
+  
+    A collection of multiple images served as one big image file to save on HTTP requests. Set a dimension and changed the background-position.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
+
+    - visibility: hidden
+    - width: 0; height: 0;
+    - text-indent: -1000px
+    - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Any familiarity with styling SVG?
 * How do you optimize your webpages for print?
 * What are some of the "gotchas" for writing efficient CSS?
+
+    - Avoid using * selector
+    - Use the least number of selectors to style an element
+    - Know how specificity works
+    - avoid !important
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
+
+    - use @font-face
+    - link to a webfont (e.g. Google web fonts)
 * Explain how a browser determines what elements match a CSS selector.
+
+    - Matches from right to left
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+
+    - 
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
 * What's the difference between inline and inline-block?
@@ -156,8 +183,14 @@ This file contains a number of front-end interview questions that can be used wh
 
     Both are use to specify the context of `this` but they differ in how arguments are passed. `.apply` arguments are passed as an array while `.call` is comma separated.
 * Explain `Function.prototype.bind`.
+
+    Creates a function that has `this` bound the context passed as parameter to bind.
 * When would you use `document.write()`?
 * What's the difference between feature detection, feature inference, and using the UA string?
+
+    Feature detection - you check if a feature is supported or not
+    Feature Inference - you check if a feature is supported by through some related function
+    UA String - you check the user agent used 
 * Explain AJAX in as much detail as possible.
 
     AJAX is a collection of technologies (HTML, CSS, DOM, JS, etc) that allow you to obtain resources from a server without fully reloading the page.
@@ -187,9 +220,14 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+
+    `use strict` activates strict mode and is a good way to avoid common javascript programming bugs.
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+
+    To avoid accidentally overwriting a method or property that has previously been declared and used and at the same time, to protect your own variables from being overwritten.
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
 
