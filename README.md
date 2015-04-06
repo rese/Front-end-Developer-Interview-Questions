@@ -27,20 +27,53 @@ This file contains a number of front-end interview questions that can be used wh
 * What is a recent technical challenge you experienced and how did you solve it?
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
 * Talk about your preferred development environment.
+
+  - Mac. Github. Sublime. A bit of VIM. TMUX. External monitors. 
 * Which version control systems are you familiar with?
+
+  - Git.
 * Can you describe your workflow when you create a web page?
+
+  - Identify the functionality that the page needs to have. Determine if a framework is needed and if so, select an appropriate one.
+  - Identify the structure of the page in terms of markup. Write out the base structure of the page including only the main blocks representing the elements.
+  - Code and style the elements one by one. Iterate. Refactor if needed. For an element with multiple states, craft each one and add comments to self/backend developer.
+  - Write JS. 
+  - Stub out any data that's needed.
+  - Create basic routes and link the pages.
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+
+  - Bundle them all up into 1 (using a preprocessor) and minify.
 * Can you describe the difference between progressive enhancement and graceful degradation?
+
+  Progressive enhancement builds a base level of experience and adds functionalities if the client supports it. Graceful degradation is developing for modern browsers while making sure it works for older browsers.
 * How would you optimize a website's assets/resources?
+
+  - Use sprites for images
+  - Concatenate files (CSS, JS)
+  - Use file minification
+  - Cache resources
+  - Use a CDN
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
+
+  - Minimize HTTP Requests
+  - Load resources asynchronously
+  - CSS on top, scripts at the bottom
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
+
+  - Conform to the standard of the team but state my reasons about my preference.
 * Describe how you would create a simple slideshow page.
 * What tools do you use to test your code's performance?
 * If you could master one technology this year, what would it be?
+
+  - Node
 * Explain the importance of standards and standards bodies.
+ 
+  - They define standards that technologies must conform to making development easier and predictable (to a degree). 
 * What is Flash of Unstyled Content? How do you avoid FOUC?
+
+  - It is when the browser renders the content of the page with it's default styling due to resources not having been downloaded yet. There are many techniques but the most basic one is to put CSS in `<head>` and `<script>` just before `</body>`.
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
