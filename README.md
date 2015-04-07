@@ -238,6 +238,8 @@ This file contains a number of front-end interview questions that can be used wh
     When elements are nested and an event is 'triggered', the event moves outward of the nest and executes any handlers for it.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
+
+    Because it clutters the JS object with non-standard functionality and breaks encapsulation.
 * Difference between document load event and document ready event?
 
     Document ready means that the document has been parsed and DOM is ready. Document load is triggered when the document is ready and all of its resources downloaded.
